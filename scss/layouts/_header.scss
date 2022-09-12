@@ -1,0 +1,25 @@
+.header {
+	border-bottom: var(--header-border) solid #ececec;
+
+	@media screen and (max-width: 767px) {
+		height: 60px;
+		display: flex;
+		align-items: center;
+	}
+
+	&__container {
+		height: 100%;
+	}
+
+	&__menu {
+		@media screen and (max-width: 767px) {
+			margin-bottom: 80px;
+		}
+	}
+
+	&__soc-list {
+		@media screen and (max-width: 767px) {
+			margin-top: 64px;
+		}
+	}
+}

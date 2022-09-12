@@ -1,0 +1,45 @@
+.logos {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 30px;
+
+	&__item {
+		/* calc((100% - кол-во_зазоров_в_строке * значение_
+	одного_зазора) / кол-во_элементов_в_строке) */
+		flex-basis: calc((100% - 30px) / 2);
+		height: 92px;
+
+		@include tablet {
+			flex-basis: calc((100% - 2 * 30px) / 3);
+		}
+
+		@include desctop {
+			flex-basis: calc((100% - 5 * 30px) / 6);
+			flex-wrap: nowrap;
+		}
+	}
+
+	&__link {
+		height: 100%;
+		border: 1px solid #afb1b8;
+		border-radius: 4px;
+		color: #afb1b8;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		transition: color var(--duration) var(--function), border-color var(--duration) var(--function);
+
+		&:hover,
+		&:focus {
+			border-color: var(--accent-color);
+			color: var(--accent-color);
+		}
+	}
+
+	&__icon {
+		--icon-color: currentColor;
+		fill: var(--icon-color);
+	}
+}
